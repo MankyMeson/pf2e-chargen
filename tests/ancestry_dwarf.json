@@ -1,0 +1,17 @@
+{
+    "data_type": "Ancestry",
+    "name": "Dwarf",
+    "source": { "name": "Player Core", "page_num": "43", "Legacy": false },
+    "traits": [ "Dwarf", "Humanoid" ],
+    "description": "Dwarves have a well-earned reputation as a stoic and stern people, but they also have an unbridled zeal and deeply value artisanship. To a stranger, they can seem untrusting and clannish, but to their friends and family, they are warm and caring. While trust from a dwarf is hard-won, once gained it is as strong as iron.\n\nIf you want to play a character who is as hard as nails, a stubborn and unrelenting adventurer, with a mix of rugged toughness and deep wisdom, you should play a dwarf.",
+    "hit_points": 10,
+    "size": "medium",
+    "speed": 20,
+    "boosts": [ "con", "wis", "free" ],
+    "flaws": [ "cha" ],
+    "languages": [ "Common", "Dwarven" ],
+    "features": [
+        { "name": "Darkvision", "description": "You can see in darkness and dim light just as well as you can see in bright light, though your vision in darkness is in black and white." },
+        { "name": "Clan Dagger", "description": "You get one clan dagger for free, as it was given to you at birth. Selling this clan dagger is a terrible taboo and earns you the disdain of other dwarves." }
+    ]
+}

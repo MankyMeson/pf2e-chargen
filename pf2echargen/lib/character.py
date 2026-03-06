@@ -1,7 +1,8 @@
-"""Base character class and supporting functions"""
+"""Base character class and supporting functions."""
 
 
 from abilities import Abilities
+from ancestry import Ancestry
 
 
 class Character():
@@ -25,7 +26,7 @@ class Character():
         self.class = None
 
 # Stats and proficiencies.
-        self.ability_scores = Abilities()
+        self.abilities = Abilities()
         self.proficiencies = None
         self.languages = ['Common']
         self.features = []

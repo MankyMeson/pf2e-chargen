@@ -1,5 +1,7 @@
 """Abilities"""
 
+from utils import input_error_msg
+
 
 ABILITIES = ['str', 'dex', 'con', 'int', 'wis', 'cha']
 
@@ -21,7 +23,7 @@ class Abilities:
         }
 
 
-    def boost(abilities):
+    def boost(self,abilities):
         """Applies boost to a supplied ability score or list of ability scores.
         """
 
@@ -29,6 +31,12 @@ class Abilities:
             abilities = [abilities]
 
         for ability in abilites:
+            if not is_ability(string):
+                raise ValueError(input_error_msg(
+                    'abilities.Abilities.boost',
+                    'Ability score inputs must be one of: str, dex, con, int, '
+                    'wis, cha'
+                )
             ability = ability.lower()
             ability_score = int(self.abilities[ability])
             ability_partial = bool(self.abilities[ability + '_partial'])
@@ -45,7 +53,7 @@ class Abilities:
             self.abilities[ability + '_partial'] = ability_partial
 
 
-    def flaw(abilities):
+    def flaw(self,abilities):
         """Applies a flaw to ability or abilities supplied
         """
         if isinstance(abilities, str):
@@ -55,3 +63,8 @@ class Abilities:
             ability = ability.lower()
             self.abilities[ability] -= 1
 
+
+    def is_ability(string):
+        """Checks if the supplied string is one of the six recognised spellings.
+        """
+        return string.lower() in ABILITIES
